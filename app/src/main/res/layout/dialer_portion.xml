@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialerActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff424242"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/oneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1&#10;" />
+
+            <Button
+                android:id="@+id/twoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2&#10;ABC " />
+
+            <Button
+                android:id="@+id/threeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3&#10;DEF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/fourButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4&#10;GHI" />
+
+            <Button
+                android:id="@+id/fiveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5&#10;JKL" />
+
+            <Button
+                android:id="@+id/sixButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6&#10;MNO" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/sevenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7&#10;PQRS" />
+
+            <Button
+                android:id="@+id/eightButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8&#10;TUV" />
+
+            <Button
+                android:id="@+id/nineButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9&#10;WXYZ" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/starButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/zeroButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/poundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tableLayout"
+                android:text="BACK" />
+
+            <Button
+                android:id="@+id/callButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/backButton"
+                android:layout_alignEnd="@+id/tableLayout"
+                android:text="CALL" />
+
+            <Button
+                android:id="@+id/backspaceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEL" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/contactsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACTS"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/tableLayout" />
+
+</RelativeLayout>
