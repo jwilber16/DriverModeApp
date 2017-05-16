@@ -145,4 +145,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/tableLayout" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tableLayout"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="TextView"
+        android:textSize="30sp" />
+
 </RelativeLayout>
