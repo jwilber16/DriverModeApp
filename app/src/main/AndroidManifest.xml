@@ -34,7 +34,6 @@
         <activity android:name=".acceloremeterNew">
 
         </activity>
-        <activity android:name=".DialerActivity" />
         <activity
             android:name="MediaActivity"
             android:label="@string/title_activity_media"
