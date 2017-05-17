@@ -139,15 +139,16 @@ public class acceloremeterNew extends Activity implements LocationListener {
 
         //must check what the speed is
         if(location == null){ //menas no speed
-            speedNumber.setText("0");
+            speedNumber.setText("0 MPH");
         }
         else{ //there is spseed
             float currSpeed = location.getSpeed();
 
             //change to mph
-            float mph = (float) (currSpeed * 2.23693629);
+            int mph = (int)(currSpeed * 2.23693629);
 
-            speedNumber.setText((int) mph);
+
+            speedNumber.setText(Integer.toString(mph) + " MPH");
         }
 
     }
