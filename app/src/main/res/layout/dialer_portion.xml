@@ -111,7 +111,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/backButton"
+                android:id="@+id/dialerBackButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -122,7 +122,7 @@
                 android:id="@+id/callButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/backButton"
+                android:layout_alignBottom="@+id/dialerBackButton"
                 android:layout_alignEnd="@+id/tableLayout"
                 android:text="CALL" />
 
@@ -144,5 +144,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/numberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tableLayout"
+        android:editable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="50sp" />
 
 </RelativeLayout>
