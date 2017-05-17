@@ -20,6 +20,15 @@ public class MainMenuFragment extends Fragment implements View.OnClickListener {
         Button callButton = (Button)view.findViewById(R.id.phoneButton);
         callButton.setOnClickListener(this);
 
+        Button navButton = (Button)view.findViewById(R.id.navButton);
+        navButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
