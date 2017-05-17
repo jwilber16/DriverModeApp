@@ -44,7 +44,8 @@ public class MainMenuFragment extends Fragment {
         navButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Open navigation activity
+                Intent intent = new Intent(getContext(), MapsActivity.class);
+                startActivity(intent);
             }
         });
 
