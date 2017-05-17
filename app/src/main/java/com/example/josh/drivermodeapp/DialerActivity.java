@@ -35,7 +35,7 @@ public class DialerActivity extends AppCompatActivity {
         Button starButton = (Button) findViewById(R.id.starButton);
         Button zeroButton = (Button) findViewById(R.id.zeroButton);
         Button poundButton = (Button) findViewById(R.id.poundButton);
-        Button backButton = (Button) findViewById(R.id.backButton);
+        Button dialerBackButton = (Button) findViewById(R.id.dialerBackButton);
         Button callButton = (Button) findViewById(R.id.callButton);
         Button backspaceButton = (Button) findViewById(R.id.backspaceButton);
         Button contactsButton = (Button) findViewById(R.id.contactsButton);
@@ -136,13 +136,6 @@ public class DialerActivity extends AppCompatActivity {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:" + numString));
                 if (ActivityCompat.checkSelfPermission(DialerActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
 
                     ActivityCompat.requestPermissions(DialerActivity.this, new String[]{Manifest.permission.CALL_PHONE},
                             1);
@@ -154,6 +147,13 @@ public class DialerActivity extends AppCompatActivity {
             }
         });
 
+        dialerBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(DialerActivity.this, MainActivity.class);
+                startActivity(backIntent);
+            }
+        });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 }

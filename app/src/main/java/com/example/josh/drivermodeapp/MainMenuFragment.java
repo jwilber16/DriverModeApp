@@ -18,6 +18,8 @@ public class MainMenuFragment extends Fragment {
 
         View view  = inflater.inflate(R.layout.main_menu_fragment, container, false);
 
+
+        //Call button open dialer activity
         Button callButton = (Button)view.findViewById(R.id.phoneButton);
         callButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -45,7 +47,20 @@ public class MainMenuFragment extends Fragment {
                 //Open navigation activity
             }
         });
+
+        //Initiates the driver mode that displays speed, etc
+        Button driverModeButton = (Button)view.findViewById(R.id.driverModeButton);
+        driverModeButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), acceloremeterNew.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
+
+
+
 
 }
