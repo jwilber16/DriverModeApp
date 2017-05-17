@@ -18,7 +18,6 @@ public class MainMenuFragment extends Fragment {
 
         View view  = inflater.inflate(R.layout.main_menu_fragment, container, false);
 
-        //Call button open dialer activity
         Button callButton = (Button)view.findViewById(R.id.phoneButton);
         callButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -33,7 +32,7 @@ public class MainMenuFragment extends Fragment {
         mediaButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DialerActivity.class);
+                Intent intent = new Intent(getContext(), MediaActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,8 +47,5 @@ public class MainMenuFragment extends Fragment {
         });
         return view;
     }
-
-
-
 
 }
