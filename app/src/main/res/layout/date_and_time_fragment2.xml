@@ -13,6 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:format12Hour="MMM dd, yyyy hh:mm aa"
+        android:format24Hour="MMM dd, yyyy k:mm"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="30sp" />
 </RelativeLayout>
