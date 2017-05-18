@@ -29,11 +29,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/navMenuButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_gravity="bottom"
-            android:text="Button" />
+            android:text="Menu" />
     </LinearLayout>
 
 </RelativeLayout>

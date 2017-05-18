@@ -1,8 +1,11 @@
 package com.example.josh.drivermodeapp;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -24,6 +27,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        Button menuButton = (Button)findViewById(R.id.navMenuButton);
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapsActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
@@ -42,8 +54,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng sanMarcos = new LatLng(33.1433700, -117.1661400);
+        mMap.addMarker(new MarkerOptions().position(sanMarcos).title("Marker in San Marcos"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sanMarcos));
     }
 }
